@@ -29,11 +29,11 @@ name="test"
 proba=proba*255
 proba = proba.astype(np.uint8)
 
-ret,im_thresh0 = cv2.threshold(proba,200,255,cv2.THRESH_BINARY)
+ret,im_thresh0 = cv2.threshold(proba,190,255,cv2.THRESH_BINARY)
 #im_thresh1 = cv2.adaptiveThreshold(proba,255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 5, 3)
 #im_thresh2= cv2.adaptiveThreshold(proba,255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 25,10)
 
-#cv2.imwrite(name+".bmp",thresh)
-cv2.imshow('binarized',im_thresh0)
+cv2.imwrite(name+".png",proba)
+cv2.imshow('binarized',proba)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
